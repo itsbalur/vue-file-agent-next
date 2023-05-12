@@ -147,6 +147,9 @@ class UploadHelper {
         formData = new FormData();
         formData.append('file', fileRecord.file as File);
         formData.append('filename', fileRecord.name());
+        formData.append('lastModified', fileRecord.lastModified());
+
+    
       }
       const promise = this.doUpload(
         url,
